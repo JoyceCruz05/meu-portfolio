@@ -2,10 +2,6 @@
 
 Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido como uma vitrine para apresentar minhas habilidades, experiências e projetos.
 
-## 📋 Descrição
-
-"Meu Portfólio" é um website profissional desenvolvido com HTML e CSS para apresentar minha trajetória profissional, habilidades e projetos.
-
 ## 🧩 Estrutura
 
 O portfólio está organizado em três seções principais:
