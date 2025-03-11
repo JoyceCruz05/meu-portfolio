@@ -104,17 +104,9 @@ body {
 }
 
 .botao-cv button:hover {
-    background-color: #fff; /* Cor de fundo no hover */
-    color: #000000; /* Cor do texto no hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo no hover */
+    color: #F4ACB7; /* Cor do texto no hover */
     transform: scale(1.05); /* Aumenta o botão um pouco quando passa o mouse */
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    .botao-cv button {
-        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
-        padding: 10px 20px; /* Ajusta o tamanho do botão */
-    }
 }
 
 /* Estilo da imagem fixa */
@@ -179,7 +171,7 @@ body {
 .habilidade {
     text-align: center;
     font-size: 14px;
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
 }
 
 .habilidade i {
@@ -215,7 +207,81 @@ footer {
 }
 
 .footer-link:hover {
-    color: #333333;
+    color: #1a1a1a;
+}
+
+/* Seção Projetos */
+.projetos {
+    text-align: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #FFE5D9;
+}
+
+.projetos__titulo {
+    font-size: 2rem;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 30px;
+    color: var(--cor-secundaria);
+}
+
+/* Grid de Projetos */
+.projetos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartão do Projeto */
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    font-family: var(--fonte-primaria);
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilizando Imagens */
+.projeto__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover .projeto__img img {
+    transform: scale(1.1);
+}
+
+/* Nome do Projeto */
+.projeto__nome {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Botão Link */
+.projeto__link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.projeto__link:hover {
+    background: var(--cor-footer);
+    transform: scale(1.1);
 }
 
 /* Responsividade */
@@ -236,48 +302,10 @@ footer {
     .apresentacao__conteudo {
         width: auto;
     }
+
+    .botao-cv button {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+        padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
 }
 
-.projetos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espaçamento entre os projetos */
-}
-
-.projeto {
-    background-color: #fff; /* Rosa vibrante */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    width: 300px; /* Define um tamanho fixo para manter a organização */
-    color: #000000;
-    font-family: var(--fonte-secundaria);
-}
-
-.projeto:hover {
-    transform: scale(1.05); /* Efeito ao passar o mouse */
-}
-
-.projeto h3 {
-    margin: 0 0 10px;
-    font-size: 20px;
-    font-family: var(--fonte-secundaria);
-}
-
-.projeto__link {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--cor-terciaria);
-    color: #000000;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.projeto__link:hover {
-    background-color: #000000;
-    color: white;
-}
