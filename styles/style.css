@@ -18,8 +18,12 @@ body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe 100% da altura da tela */
 }
 
+/* Cabeçalho */
 .cabecalho {
     padding: 2% 0 0 15%;
 }
@@ -37,6 +41,7 @@ body {
     text-decoration: none;
 }
 
+/* Seção de Apresentação */
 .apresentacao {
     padding: 3% 15%;
     display: flex;
@@ -78,10 +83,58 @@ body {
     font-weight: 400;
 }
 
+/* Estilo geral do botão */
+.botao-cv {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.botao-cv button {
+    background-color: #F4ACB7; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    font-family: 'Montserrat', sans-serif; /* Fonte do botão */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px; /* Espaçamento interno */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mãozinha */
+    transition: background-color 0.3s, transform 0.3s; /* Animação para cor de fundo e transformação */
+    display: inline-block; /* Deixa o botão em linha */
+    text-align: center; /* Centraliza o texto */
+}
+
+.botao-cv button:hover {
+    background-color: #fff; /* Cor de fundo no hover */
+    color: #000000; /* Cor do texto no hover */
+    transform: scale(1.05); /* Aumenta o botão um pouco quando passa o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .botao-cv button {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+        padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Estilo da imagem fixa */
 .conteudo__img {
-    max-width: 40%;
+    max-width: 25%;  /* Ajusta o tamanho da imagem */
     height: auto;
     border-radius: 50px;
+    position: fixed;
+    top: 50%;
+    right: 15%;  /* Ajuste a distância para a esquerda */
+    transform: translateY(-50%);  /* Centraliza a imagem verticalmente */
+    z-index: 1;  /* Coloca a imagem na frente do conteúdo */
+    opacity: 0.6;  /* Opacidade da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+}
+
+/* Efeito no hover */
+.conteudo__img:hover {
+    transform: scale(1.1) translateY(-50%); /* Aumenta a imagem e mantém a centralização */
+    opacity: 1;  /* Torna a imagem mais opaca */
 }
 
 .apresentacao__links {
@@ -116,6 +169,7 @@ body {
     width: auto;
 }
 
+/* Habilidades */
 .habilidades {
     display: flex;
     justify-content: flex-start;
@@ -142,17 +196,29 @@ body {
     color: var(--cor-secundaria);
 }
 
+/* Footer */
 footer {
     background-color: var(--cor-footer);
     color: #000000;
     font-family: var(--fonte-secundaria);
     text-align: center;
     padding: 20px 0;
-    position: relative;
     width: 100%;
-    bottom: 0;
+    margin-top: auto; /* Faz com que o footer vá para o final da página */
 }
 
+/* Ajustando a cor do link */
+.footer-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    color: #333333;
+}
+
+/* Responsividade */
 @media (max-width: 1200px) {
     .cabecalho {
         padding: 10%;
@@ -172,7 +238,6 @@ footer {
     }
 }
 
-/* Novas Alterações para a seção de Projetos */
 .projetos {
     display: flex;
     flex-direction: column;
