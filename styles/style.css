@@ -9,7 +9,7 @@ padding:0;
     --cor-primaria:#000000;
     --cor-secundaria:#FFE5D9;
     --cor-terciaria:#F4ACB7;
-    --cor-footer: #fff;
+    --cor-footer: #F4ACB7;
    
     --fonte-primaria: 'Montserrat', sans-serif;
     --fonte-secundaria:"Krona One", sans-serif;
@@ -120,6 +120,7 @@ body {
  footer {
     background-color: #333;
     color: var(--cor-footer);
+    font-family: var(--fonte-secundaria);
     text-align: center;
     padding: 20px 0; 
     position: relative;
