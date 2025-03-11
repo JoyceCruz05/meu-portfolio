@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equil="X-UA-Compatiple" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo</title>
+    <title>Sobre Mim</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="SEU_INTEGRITY_CODE" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu" >
+        <nav class="cabecalho__menu">
             <a class="cabecalho__menu__link" href="index.html">HOME</a>
             <a class="cabecalho__menu__link" href="about.html">SOBRE MIM</a>
             <a class="cabecalho__menu__link" href="curriculo.html">CURRÍCULO</a>
@@ -18,20 +18,28 @@
             <a class="cabecalho__menu__link" href="habilidades.html">HABILIDADES</a>
         </nav>
     </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Joyce da Cruz Oliveira</h1>
-            <p class="apresentacao__conteudo__texto">
-                 Estudante de Sistemas de Informação cursando 3º período. Busco uma oportunidade para aplicar minhas habilidades e contribuir para o desenvolvimento de projetos web inovadores.
-            </p>
-            <a class="botao-cv" href="./assets/curriculo.pdf" download="Curriculo_Joyce_da_Cruz_Oliveira.pdf">
-                <button>Baixar CV</button>
-            </a>
+
+    <main>
+        <section class="habilidades">
+            <h2 class="habilidades__titulo">Minhas Habilidades</h2>
+            <div class="habilidades__grid">
+                <div class="habilidade">
+                    <i class="fab fa-html5 fa-4x" style="color: #e34c26;"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="habilidade">
+                    <i class="fab fa-css3-alt fa-4x" style="color: #264de4;"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="habilidade">
+                    <i class="fab fa-js fa-4x" style="color: #f0db4f;"></i>
+                    <p>JavaScript</p>
+                </div>
+            </div>
         </section>
-        <img src="./assets/Imagem (1).png" alt="foto de Joyce" class="conteudo__img">
     </main>
     <footer>
         <p>&copy; 2025 Desenvolvido por <a href="https://github.com/JoyceCruz05" target="_blank" class="footer-link">Joyce da Cruz Oliveira</a>.</p>
-    </footer>          
+    </footer>      
 </body>
 </html>
