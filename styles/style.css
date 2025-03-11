@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 * {
-margin: 0;
-padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-    --cor-primaria:#000000;
-    --cor-secundaria:#FFE5D9;
-    --cor-terciaria:#F4ACB7;
+    --cor-primaria: #000000;
+    --cor-secundaria: #FFE5D9;
+    --cor-terciaria: #F4ACB7;
     --cor-footer: #F4ACB7;
-   
     --fonte-primaria: 'Montserrat', sans-serif;
-    --fonte-secundaria:"Krona One", sans-serif;
+    --fonte-secundaria: "Krona One", sans-serif;
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
-    color:var(--cor-secundaria);
+    color: var(--cor-secundaria);
 }
 
 .cabecalho {
@@ -55,8 +54,8 @@ body {
 }
 
 .apresentacao__conteudo__titulo {
-   font-size: 30px;
-   font-family: var(--fonte-secundaria);
+    font-size: 30px;
+    font-family: var(--fonte-secundaria);
 }
 
 .titulo-destaque {
@@ -68,15 +67,15 @@ body {
     font-family: var(--fonte-primaria);
 }
 
-.apresentacao__conteudo__lista{
+.apresentacao__conteudo__lista {
     font-size: 2em;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
-.apresentacao__conteudo__acesso{
+.apresentacao__conteudo__acesso {
     display: flex;
     font-family: var(--fonte-secundaria);
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 .conteudo__img {
@@ -86,42 +85,41 @@ body {
 }
 
 .apresentacao__links {
-        display: flex;
-        flex-direction: row;
-        justify-content:flex-start;
-        gap: 20px;
-        flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-    
- .apresentacao__links__link {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        border: 2px solid var(--cor-terciaria);
-        min-width: 278px; 
-        max-width: 378px; 
-        text-align: center;
-        border-radius: 8px;
-        font-size: 24px;
-        font-weight: 600;
-        padding: 21.5px 0;
-        text-decoration: none;
-        color:var(--cor-secundaria);
-        font-family: var(--fonte-primaria);
- }
+
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    min-width: 278px;
+    max-width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+}
 
 .apresentacao__links__link:hover {
-        font-size: 24px;
-        font-family: var(--fonte-secundaria);
-        margin-bottom: 20px;
-        width: auto;
- }
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 20px;
+    width: auto;
+}
 
- .habilidades {
+.habilidades {
     display: flex;
     justify-content: flex-start;
     gap: 30px;
-    padding-left: 12%;
 }
 
 .habilidade {
@@ -143,13 +141,13 @@ body {
     font-weight: bold;
     color: var(--cor-secundaria);
 }
- 
- footer {
-    background-color: #333;
-    color: var(--cor-footer);
+
+footer {
+    background-color: var(--cor-footer);
+    color: #000000;
     font-family: var(--fonte-secundaria);
     text-align: center;
-    padding: 20px 0; 
+    padding: 20px 0;
     position: relative;
     width: 100%;
     bottom: 0;
@@ -157,11 +155,11 @@ body {
 
 @media (max-width: 1200px) {
     .cabecalho {
-        padding: 10%
+        padding: 10%;
     }
 
     .cabecalho__menu {
-        justify-content:center;
+        justify-content: center;
     }
 
     .apresentacao {
@@ -172,4 +170,49 @@ body {
     .apresentacao__conteudo {
         width: auto;
     }
+}
+
+/* Novas Alterações para a seção de Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os projetos */
+}
+
+.projeto {
+    background-color: #fff; /* Rosa vibrante */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    width: 300px; /* Define um tamanho fixo para manter a organização */
+    color: #000000;
+    font-family: var(--fonte-secundaria);
+}
+
+.projeto:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+.projeto h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-family: var(--fonte-secundaria);
+}
+
+.projeto__link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--cor-terciaria);
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.projeto__link:hover {
+    background-color: #000000;
+    color: white;
 }
