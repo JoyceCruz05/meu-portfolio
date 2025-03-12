@@ -129,6 +129,13 @@ body {
     opacity: 1;  /* Torna a imagem mais opaca */
 }
 
+.conteudo__img:hover {
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 20px;
+    width: auto;
+}
+
 .apresentacao__links {
     display: flex;
     flex-direction: row;
