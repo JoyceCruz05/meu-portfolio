@@ -35,7 +35,7 @@ body {
 
 .cabecalho__menu__link {
     font-family: var(--fonte-primaria);
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
@@ -237,6 +237,7 @@ footer {
     color: #000000;
     font-family: var(--fonte-secundaria);
     text-align: center;
+    font-size: 12px;
     padding: 20px 0;
     width: 100%;
     margin-top: auto; /* Faz com que o footer vá para o final da página */
@@ -246,6 +247,7 @@ footer {
 .footer-link {
     text-decoration: none;
     color: #000000;
+    font-size: 12px;
     font-weight: bold;
 }
 
