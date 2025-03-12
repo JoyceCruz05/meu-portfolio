@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 * {
-margin: 0;
-padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-    --cor-primaria:#000000;
-    --cor-secundaria:#FFE5D9;
-    --cor-terciaria:#F4ACB7;
+    --cor-primaria: #000000;
+    --cor-secundaria: #FFE5D9;
+    --cor-terciaria: #F4ACB7;
     --cor-footer: #F4ACB7;
-   
     --fonte-primaria: 'Montserrat', sans-serif;
-    --fonte-secundaria:"Krona One", sans-serif;
+    --fonte-secundaria: "Krona One", sans-serif;
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
-    color:var(--cor-secundaria);
+    color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe 100% da altura da tela */
 }
 
+/* Cabeçalho */
 .cabecalho {
     padding: 2% 0 0 15%;
 }
@@ -38,6 +41,7 @@ body {
     text-decoration: none;
 }
 
+/* Seção de Apresentação */
 .apresentacao {
     padding: 3% 15%;
     display: flex;
@@ -55,8 +59,8 @@ body {
 }
 
 .apresentacao__conteudo__titulo {
-   font-size: 30px;
-   font-family: var(--fonte-secundaria);
+    font-size: 30px;
+    font-family: var(--fonte-secundaria);
 }
 
 .titulo-destaque {
@@ -68,21 +72,61 @@ body {
     font-family: var(--fonte-primaria);
 }
 
-.apresentacao__conteudo__lista{
+.apresentacao__conteudo__lista {
     font-size: 2em;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
-.apresentacao__conteudo__acesso{
+.apresentacao__conteudo__acesso {
     display: flex;
     font-family: var(--fonte-secundaria);
-    font-weight: 400; 
+    font-weight: 400;
 }
 
+/* Estilo geral do botão */
+.botao-cv {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.botao-cv button {
+    background-color: #F4ACB7; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    font-family: 'Montserrat', sans-serif; /* Fonte do botão */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px; /* Espaçamento interno */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mãozinha */
+    transition: background-color 0.3s, transform 0.3s; /* Animação para cor de fundo e transformação */
+    display: inline-block; /* Deixa o botão em linha */
+    text-align: center; /* Centraliza o texto */
+}
+
+.botao-cv button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo no hover */
+    color: #F4ACB7; /* Cor do texto no hover */
+    transform: scale(1.05); /* Aumenta o botão um pouco quando passa o mouse */
+}
+
+/* Estilo da imagem fixa */
 .conteudo__img {
-    max-width: 40%;
+    max-width: 25%;  /* Ajusta o tamanho da imagem */
     height: auto;
     border-radius: 50px;
+    position: fixed;
+    top: 50%;
+    right: 15%;  /* Ajuste a distância para a esquerda */
+    transform: translateY(-50%);  /* Centraliza a imagem verticalmente */
+    z-index: 1;  /* Coloca a imagem na frente do conteúdo */
+    opacity: 0.6;  /* Opacidade da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
+}
+
+/* Efeito no hover */
+.conteudo__img:hover {
+    transform: scale(1.1) translateY(-50%); /* Aumenta a imagem e mantém a centralização */
+    opacity: 1;  /* Torna a imagem mais opaca */
 }
 
 .conteudo__img:hover {
@@ -93,82 +137,204 @@ body {
 }
 
 .apresentacao__links {
-        display: flex;
-        flex-direction: row;
-        justify-content:flex-start;
-        gap: 20px;
-        flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-    
- .apresentacao__links__link {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        border: 2px solid var(--cor-terciaria);
-        min-width: 278px; 
-        max-width: 378px; 
-        text-align: center;
-        border-radius: 8px;
-        font-size: 24px;
-        font-weight: 600;
-        padding: 21.5px 0;
-        text-decoration: none;
-        color:var(--cor-secundaria);
-        font-family: var(--fonte-primaria);
- }
+
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    min-width: 278px;
+    max-width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+}
 
 .apresentacao__links__link:hover {
-        font-size: 24px;
-        font-family: var(--fonte-secundaria);
-        margin-bottom: 20px;
-        width: auto;
- }
-
- .habilidades {
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    padding-left: 12%;
-}
-
-.habilidade {
-    text-align: center;
-    font-size: 14px;
+    font-size: 24px;
     font-family: var(--fonte-secundaria);
+    margin-bottom: 20px;
+    width: auto;
 }
 
+/* Seção Habilidades */
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    color: var(--cor-secundaria);
+}
+
+/* Título */
+.habilidades__titulo {
+    font-size: 2.0rem;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 30px;
+    color: var(--cor-secundaria);
+}
+
+/* Grid Responsivo */
+.habilidades__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilo de cada habilidade */
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.habilidade:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Ícones */
 .habilidade i {
+    font-size: 2,0rem;
     transition: transform 0.3s ease-in-out;
 }
 
-.habilidade i:hover {
-    transform: scale(1.2);
+.habilidade:hover i {
+    transform: scale(1.3);
 }
 
+/* Texto das habilidades */
 .habilidade p {
-    margin-top: 5px;
+    margin-top: 10px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--cor-secundaria);
 }
- 
- footer {
-    background-color: #333;
-    color: var(--cor-footer);
+
+/* Footer */
+footer {
+    background-color: var(--cor-footer);
+    color: #000000;
     font-family: var(--fonte-secundaria);
     text-align: center;
-    padding: 20px 0; 
-    position: relative;
+    padding: 20px 0;
     width: 100%;
-    bottom: 0;
+    margin-top: auto; /* Faz com que o footer vá para o final da página */
 }
 
-@media (max-width: 1300px) {
+/* Ajustando a cor do link */
+.footer-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    color: #1a1a1a;
+}
+
+/* Seção Projetos */
+.projetos {
+    text-align: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #FFE5D9;
+}
+
+.projetos__titulo {
+    font-size: 2rem;
+    font-family: var(--fonte-secundaria);
+    margin-bottom: 30px;
+    color: var(--cor-secundaria);
+}
+
+/* Grid de Projetos */
+.projetos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartão do Projeto */
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    font-family: var(--fonte-primaria);
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilizando Imagens */
+.projeto__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover .projeto__img img {
+    transform: scale(1.1);
+}
+
+/* Nome do Projeto */
+.projeto__nome {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Botão Link */
+.projeto__link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.projeto__link:hover {
+    background: var(--cor-footer);
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
     .cabecalho {
-        padding: 10%
+        padding: 10%;
     }
 
     .cabecalho__menu {
-        justify-content:center;
+        justify-content: center;
     }
 
     .apresentacao {
@@ -179,4 +345,10 @@ body {
     .apresentacao__conteudo {
         width: auto;
     }
+
+    .botao-cv button {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas pequenas */
+        padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
 }
+
