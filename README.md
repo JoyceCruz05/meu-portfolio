@@ -2,6 +2,9 @@
 
 Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvido como uma vitrine para apresentar minhas habilidades, experiências e projetos.
 
+![image](https://github.com/user-attachments/assets/6c612a95-e935-4427-82a5-f8ce6c6c3050)
+
+
 ## 🧩 Estrutura
 
 O portfólio está organizado em três seções principais:
