@@ -147,6 +147,7 @@ body {
 .apresentacao__links__link {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
     min-width: 278px;
@@ -353,4 +354,3 @@ footer {
         padding: 10px 20px; /* Ajusta o tamanho do botão */
     }
 }
-
